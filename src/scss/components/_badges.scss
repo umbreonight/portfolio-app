@@ -1,0 +1,45 @@
+$badge-color: $white !default;
+
+// Linked badge text color on hover
+$badge-link-hover-color: $white !default;
+$badge-bg-default: transparent !default;
+
+// Badge background color in active nav link
+$badge-link-bg: $primary-color !default;
+$badge-link-hover: darken($badge-link-bg, 5%) !default;
+
+$badge-font-weight: bold !default;
+$badge-line-height: 1 !default;
+$badge-font-size: 0.75em; // 12px
+$badge-border-radius: 10px !default;
+
+$badge-padding: 5px 12px;
+$badge-padding-extra: 7px 15px;
+
+.badge {
+  background-color: $badge-bg-default;
+  border-radius: $badge-border-radius;
+  color: $accent-color !important;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: $line-height-base;
+  padding: $badge-padding;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  letter-spacing: 0.03em;
+  border: 1px solid $accent-color;
+
+  &[href] {
+    background-color: $badge-link-bg;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $badge-link-hover;
+    }
+  }
+}

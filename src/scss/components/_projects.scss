@@ -1,0 +1,70 @@
+$project-padding: 24px !default;
+$project-bg-color: #efefef !default;
+$project-link-color: $accent-color !default;
+$project-link-color-light: lighten($project-link-color, 20%) !default;
+$project-title-font-size: 1.5rem;
+$project-title-font-size-small: 1.25rem;
+
+.project {
+    .project-image {
+        @extend .z-depth-1;
+        background-color: $card-bg-color;
+        border-radius: $base-border-radius-large;
+        margin: $element-top-margin 0 $element-bottom-margin 0;
+        overflow: hidden;
+        position: relative;
+        transition: box-shadow 0.25s;
+        box-shadow: 10px, 10px, 10px rgba($color: $onyx, $alpha: 0.03);
+
+        // Image background for content
+        img {
+            display: block;
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            min-height: 200px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .project-title {
+        color: $project-bg-color;
+
+        font-size: 24px;
+        line-height: 28px;
+
+        color: #ffffff;
+    }
+
+    .project-subtitle {
+        font-size: 12px;
+        line-height: 15px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+
+        color: #ffffff;
+    }
+
+    .project-tags {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(55px, auto));
+        padding: 0.25rem 0;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+}
+
+.projects {
+    display: grid;
+    gap: 2rem;
+}
