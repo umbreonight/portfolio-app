@@ -16,6 +16,20 @@ export const Welcome = Loadable(
   }
 );
 
+export const Education = Loadable(
+  () => import(/* webpackChunkName: "Education" */ "./Education"),
+  {
+    fallback: <Loading />, // only shown if loading takes more than 250 ms
+  }
+);
+
+export const Experience = Loadable(
+  () => import(/* webpackChunkName: "Experience" */ "./Experience"),
+  {
+    fallback: <Loading />, // only shown if loading takes more than 250 ms
+  }
+);
+
 export const Profile = Loadable(
   () => import(/* webpackChunkName: "Profile" */ "./Profile"),
   {

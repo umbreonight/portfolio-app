@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { ScrollToTop, AppBar } from "components";
+import Project from "./components/Project";
 
 const Profile = props => {
     const [loading] = useState(false);
@@ -15,34 +16,10 @@ const Profile = props => {
                     <div className="row">
                         <div className="col-12 col-sm-10 col-sm-offset-1">
                             <div className="projects">
-                                <div className="project">
-                                    <div className="project-image">
-                                        <img src="images/bluebird.jpg"></img>
-                                    </div>
-                                    <div className="project-details">
-                                        <h4 className="project-title">Project Title</h4>
-                                        <h6 className="project-subtitle">gaming themed blog social template</h6>
-                                        <div className="project-tags">
-                                            <span className="badge">React</span>
-                                            <span className="badge">SCSS</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta massa ut hendrerit interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent malesuada malesuada justo a faucibus. Integer sodales felis vitae sapien egestas, non egestas elit auctor. Suspendisse vel nisi suscipit neque interdum facilisis.</p>
-                                    </div>
-                                </div>
-                                <div className="project">
-                                    <div className="project-image">
-                                        <img src="images/bluebird.jpg"></img>
-                                    </div>
-                                    <div className="project-details">
-                                        <h4 className="project-title">Project Title</h4>
-                                        <h6 className="project-subtitle">gaming themed blog social template</h6>
-                                        <div className="project-tags">
-                                            <span className="badge">React</span>
-                                            <span className="badge">SCSS</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta massa ut hendrerit interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent malesuada malesuada justo a faucibus. Integer sodales felis vitae sapien egestas, non egestas elit auctor. Suspendisse vel nisi suscipit neque interdum facilisis.</p>
-                                    </div>
-                                </div>
+                                <Project title="Dark Souls" subtitle="Prepare to Die Edition" image="images/dark-souls-4.jpg" />
+                                <Project title="Bloodborne" subtitle="The Old Hunters" image="images/bloodborne.jpeg" />
+                                <Project title="Mass Effect" subtitle="Andromeda" image="images/mass-effect.jpg" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta massa ut hendrerit interdum." />
+                                <Project title="Dark Souls" subtitle="Prepare to Die Edition" image="images/dark-souls-4.jpg" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta massa ut hendrerit interdum." />
                             </div>
                         </div>
                     </div>

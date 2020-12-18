@@ -100,6 +100,7 @@ main {
   background: radial-gradient(circle, $onyx 10%, darken($onyx, 10%) 80%), $secondary-color;
   min-height: 100vh;
   padding: 60px 1rem 2rem;
+  background-attachment: fixed;
 
   &.hub-bg {
     background-color: $secondary-color;

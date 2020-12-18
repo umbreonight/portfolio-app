@@ -1,21 +1,22 @@
-$project-padding: 24px !default;
-$project-bg-color: #efefef !default;
-$project-link-color: $accent-color !default;
-$project-link-color-light: lighten($project-link-color, 20%) !default;
-$project-title-font-size: 1.5rem;
-$project-title-font-size-small: 1.25rem;
+$education-item-padding: 24px !default;
+$education-item-bg-color: #efefef !default;
+$education-item-link-color: $accent-color !default;
+$education-item-link-color-light: lighten($education-item-link-color, 20%) !default;
+$education-item-title-font-size: 1.5rem;
+$education-item-title-font-size-small: 1.25rem;
 
-.projects {
+.education-items {
     display: grid;
     gap: 2rem;
+    padding: 1rem 0 4rem;
 
     @include sm() {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-.project {
-    .project-image {
+.education-item {
+    .education-item-image {
         @extend .z-depth-1;
         background-color: $card-bg-color;
         border-radius: $base-border-radius-large;
@@ -45,16 +46,18 @@ $project-title-font-size-small: 1.25rem;
         }
     }
 
-    .project-title {
-        color: $project-bg-color;
+    .education-item-title {
+        color: $education-item-bg-color;
 
         font-size: 24px;
         line-height: 28px;
 
         color: #ffffff;
+
+        margin: 0;
     }
 
-    .project-subtitle {
+    .education-item-subtitle {
         font-size: 12px;
         line-height: 15px;
         /* identical to box height */
@@ -64,7 +67,7 @@ $project-title-font-size-small: 1.25rem;
         color: #ffffff;
     }
 
-    .project-tags {
+    .education-item-tags {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(55px, auto));
         padding: 0.25rem 0;
