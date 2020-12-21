@@ -1,22 +1,12 @@
-$education-item-padding: 24px !default;
-$education-item-bg-color: #efefef !default;
-$education-item-link-color: $accent-color !default;
-$education-item-link-color-light: lighten($education-item-link-color, 20%) !default;
-$education-item-title-font-size: 1.5rem;
-$education-item-title-font-size-small: 1.25rem;
+$experience-item-padding: 24px !default;
+$experience-item-bg-color: #efefef !default;
+$experience-item-link-color: $accent-color !default;
+$experience-item-link-color-light: lighten($experience-item-link-color, 20%) !default;
+$experience-item-title-font-size: 1.5rem;
+$experience-item-title-font-size-small: 1.25rem;
 
-.education-items {
-    display: grid;
-    gap: 2rem;
-    padding: 1rem 0 4rem;
-
-    @include md() {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.education-item {
-    .education-item-image {
+.experience-item {
+    .experience-item-image {
         @extend .z-depth-1;
         background-color: $card-bg-color;
         border-radius: $base-border-radius-large;
@@ -46,8 +36,8 @@ $education-item-title-font-size-small: 1.25rem;
         }
     }
 
-    .education-item-title {
-        color: $education-item-bg-color;
+    .experience-item-title {
+        color: $experience-item-bg-color;
 
         font-size: 24px;
         line-height: 28px;
@@ -57,7 +47,7 @@ $education-item-title-font-size-small: 1.25rem;
         margin: 0;
     }
 
-    .education-item-subtitle {
+    .experience-item-subtitle {
         font-size: 12px;
         line-height: 15px;
         /* identical to box height */
@@ -67,7 +57,7 @@ $education-item-title-font-size-small: 1.25rem;
         color: #ffffff;
     }
 
-    .education-item-tags {
+    .experience-item-tags {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(55px, auto));
         padding: 0.25rem 0;
@@ -75,7 +65,7 @@ $education-item-title-font-size-small: 1.25rem;
         margin-top: 1rem;
     }
 
-    .education-item-overview {
+    .experience-item-overview {
         margin: 1.5rem 0;
     }
 }

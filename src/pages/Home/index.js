@@ -13,8 +13,10 @@ const Home = (props) => {
     <Fragment>
       <AppBar />
       <main role="main">
+        <h3>Portfolio App</h3>
         <div className="link-group">
         <Link to="/welcome">Welcome</Link>
+        <Link to="/hub">Hub</Link>
         <Link to="/profile">Profile</Link>
         <Link to="/education">Education</Link>
         <Link to="/experience">Experience</Link>

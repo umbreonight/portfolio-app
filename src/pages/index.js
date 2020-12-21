@@ -16,6 +16,13 @@ export const Welcome = Loadable(
   }
 );
 
+export const Hub = Loadable(
+  () => import(/* webpackChunkName: "Hub" */ "./Hub"),
+  {
+    fallback: <Loading />, // only shown if loading takes more than 250 ms
+  }
+);
+
 export const Education = Loadable(
   () => import(/* webpackChunkName: "Education" */ "./Education"),
   {

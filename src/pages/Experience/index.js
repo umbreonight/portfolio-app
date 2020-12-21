@@ -1,13 +1,38 @@
 import React, { Fragment, useState } from "react";
 import { ScrollToTop, AppBar } from "components";
-import EducationItem from "./components/EducationItem";
+import ExperienceItem from "./components/ExperienceItem";
 
 const Experience = props => {
+    const jobs = [
+        {
+            duration: "Sept 2019 - Nov 2020",
+            employer: "Ole!Connect",
+            position: "Intermediate Front End Developer",
+            overview: "Mobile app and responsive web development. Building front end user interfaces with ReactJS and integrating with back end logic using AdonisJS. Full stack development of internal development projects.",
+            duties: [
+                "Front end UI library development",
+                "Mobile and PWA development with ReactJS",
+                "Conceptualising and designing UI component libraries for responsive web development.",
+                "Bug fixes and rapid deployment to staging and live production websites and mobile web applications"
+            ]
+        },
+        {
+            duration: "Mar 2017 - Jul 2019",
+            employer: "VML South Africa",
+            position: "Junior Front End Developer",
+            overview: "Two years working on Old Mutual South Africa Transformation project. During my time here I worked from concept to development alongside Experience Designers and UI Designers to produce a completely digital solution to an otherwise paper-based process.",
+            duties: [
+                "Front end development for corporate ui kit and sales platforms",
+                "Version control and technical documentation management using the Atlassian software suite; including BitBucket, Jira, and Confluence.",
+            ]
+        }
+    ]
     const [loading] = useState(false);
 
     if (!!loading) {
         return <Loading />;
     }
+
     return (
         <Fragment>
             <AppBar back={true} />
@@ -18,8 +43,11 @@ const Experience = props => {
                             <h3 className="section-title">Experience</h3>
                             <hr className="divider"></hr>
                             <div className="education-items">
-                                <EducationItem title="VML South Africa" subtitle="Junior front end developer" duration="Sept 2019 - Nov 2020" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta massa ut hendrerit interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent malesuada malesuada justo a faucibus. Integer sodales felis vitae sapien egestas, non egestas elit auctor. Suspendisse vel nisi suscipit neque interdum facilisis." />
-                                <EducationItem title="Ole!Connect" subtitle="Intermediate front end developer" duration="Sept 2019 - nov 2020" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta massa ut hendrerit interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent malesuada malesuada justo a faucibus. Integer sodales felis vitae sapien egestas, non egestas elit auctor. Suspendisse vel nisi suscipit neque interdum facilisis." />
+                                {
+                                    jobs.map((job, index) => {
+                                        return <ExperienceItem key={index} duration={job.duration} employer={job.employer} position={job.position} overview={job.overview} duties={job.duties} />
+                                    })
+                                }
                             </div>
                         </div>
                     </div>

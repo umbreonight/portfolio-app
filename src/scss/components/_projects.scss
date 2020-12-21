@@ -19,7 +19,7 @@ $project-title-font-size-small: 1.25rem;
         @extend .z-depth-1;
         background-color: $card-bg-color;
         border-radius: $base-border-radius-large;
-        margin: $element-top-margin 0 $element-bottom-margin 0;
+        margin: $element-bottom-margin 0 $element-bottom-margin 0;
         overflow: hidden;
         position: relative;
         transition: box-shadow 0.25s;

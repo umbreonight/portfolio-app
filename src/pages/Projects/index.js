@@ -16,8 +16,8 @@ const Profile = props => {
                     <div className="row">
                         <div className="col-12 col-sm-10 col-sm-offset-1">
                             <div className="projects">
-                                <Project title="Dark Souls" subtitle="Prepare to Die Edition" image="images/dark-souls-4.jpg" />
-                                <Project title="Bloodborne" subtitle="The Old Hunters" image="images/bloodborne.jpeg" />
+                                <Project title="Dark Souls" subtitle="Prepare to Die Edition" image="images/dark-souls-4.jpg" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta massa ut hendrerit interdum." />
+                                <Project title="Bloodborne" subtitle="The Old Hunters" image="images/bloodborne.jpeg" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta massa ut hendrerit interdum." />
                                 <Project title="Mass Effect" subtitle="Andromeda" image="images/mass-effect.jpg" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta massa ut hendrerit interdum." />
                                 <Project title="Dark Souls" subtitle="Prepare to Die Edition" image="images/dark-souls-4.jpg" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta massa ut hendrerit interdum." />
                             </div>

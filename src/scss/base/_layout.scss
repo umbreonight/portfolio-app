@@ -96,8 +96,7 @@
 }
 
 main {
-  background-color: $onyx;
-  background: radial-gradient(circle, $onyx 10%, darken($onyx, 10%) 80%), $secondary-color;
+  background: $onyx;
   min-height: 100vh;
   padding: 60px 1rem 2rem;
   background-attachment: fixed;

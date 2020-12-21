@@ -6,9 +6,11 @@
   justify-content: center;
   min-height: 56px;
   padding: 1rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
+  transition: all 0.2s ease-in-out;
+  z-index: z-index(app-bars, top);
 
   .app-bar-logo {
     grid-area: app-bar-logo;
@@ -31,5 +33,10 @@
     .icon {
       color: $primary-color;
     }
+  }
+
+  &.is-collapsed {
+    background-color: darken($color: $onyx, $amount: 15);
+    padding: 0;
   }
 }

@@ -1,0 +1,43 @@
+.hub {
+    background-color: $secondary-color;
+    background: radial-gradient(circle, lighten($primary-color, 10%) 10%, $secondary-color 85%), $secondary-color;
+}
+
+.hub-item {
+    position: relative;
+    overflow: hidden;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    border-radius: $base-border-radius-large;
+    backdrop-filter: blur(40px);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    box-shadow: 10px, 10px, 10px rgba($color: $onyx, $alpha: 0.03);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.9;
+        background-color: $secondary-color;
+        background: radial-gradient(circle, lighten($secondary-color, 10%) 10%, $secondary-color 90%), $secondary-color;
+        z-index: -1;
+    }
+
+    .hub-title {
+        // position: absolute;
+        bottom: 0;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.2rem;
+        letter-spacing: 0.04em;
+        font-weight: bold;
+        font-family: $font-family-heading;
+        text-transform: uppercase;
+    }
+}

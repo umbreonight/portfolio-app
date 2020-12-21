@@ -1,7 +1,13 @@
 .profile {
   display: grid;
-  grid-template-rows: 1fr auto 1fr;
-  height: calc(100vh - 60px);
+  grid-template-rows: max-content 60px 1fr;
+  gap: 1rem;
+  height: calc(100vh - 92px);
+
+  @include rwd(375px) {
+    gap: 1.5rem;
+  }
+  
 
   .profile-header {
     display: flex;
@@ -9,11 +15,11 @@
     align-items: center;
 
     .profile-image {
-      height: 240px;
-      width: 240px;
+      height: 200px;
+      width: 200px;
       overflow: hidden;
       border-radius: 100%;
-      margin: 2rem 0 1rem;
+      margin: 1rem 0 1rem;
       position: relative;
 
       // Image background for content
@@ -35,12 +41,20 @@
     .profile-name {
       text-align: center;
       text-transform: uppercase;
-      letter-spacing: .02rem;
+      letter-spacing: 0.02rem;
+
+      @include rwd(320px) {
+        font-size: 21px;
+      }
+
+      @include rwd(375px) {
+        font-size: 28px;
+      }
 
       small {
         display: block;
-        margin: .5rem 0;
-        font-size: .875rem;
+        margin: 0.5rem 0;
+        font-size: 0.875rem;
         color: whitesmoke;
       }
     }
@@ -48,19 +62,24 @@
 
   .profile-skills {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
 
     .profile-skills-item {
       width: 60px;
       height: 60px;
-      border: 2px solid white;
-      border-radius: 100%;
       display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1rem;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1rem;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #413c37, #37322e);
+      box-shadow: 6px 6px 12px #34302b, -6px -6px 12px #46403b;
+
+      &:active {
+        border-radius: 50%;
+        background: linear-gradient(145deg, #37322e, #413c37);
+        box-shadow: 6px 6px 12px #34302b, -6px -6px 12px #46403b;
+      }
     }
   }
 
@@ -72,6 +91,9 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 2rem 1rem;
   }
+}
+
+.intro {
+  padding: 2rem 0;
 }

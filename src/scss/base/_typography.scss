@@ -143,8 +143,9 @@ a {
 blockquote {
   font-size: 1.125rem;
   color: $text-color;
-  padding: 10px 0 10px 25px;
-  border-left: 5px solid $primary-color;
+  padding: 10px 25px 10px 25px;
+  text-align: center;
+  text-transform: uppercase;
   margin: 15px 0 15px 0;
   line-height: 1.42857;
   max-width: 33em;

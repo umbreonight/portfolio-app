@@ -1,17 +1,19 @@
 import React, { Fragment } from "react";
 
-const EducationItem = props => {
+const ExperienceItem = props => {
 
-    let { school, course, duration, tags = [], overview, duties = [] } = props;
+    let { employer, position, duration, tags = [], overview, duties = [] } = props;
+
+    console.log(duties)
 
     return (
         <Fragment>
-            <div className="education-item">
-                <div className="education-item-details">
+            <div className="experience-item">
+                <div className="experience-item-details">
                     <span className="overline">{duration}</span>
-                    <h4 className="education-item-title">{course}</h4>
-                    <h6 className="education-item-subtitle">{school}</h6>
-                    {!!overview && <p className="education-item-overview">{overview}</p>}
+                    <h4 className="experience-item-title">{employer}</h4>
+                    <h6 className="experience-item-subtitle">{position}</h6>
+                    {!!overview && <p className="experience-item-overview">{overview}</p>}
                     {!!duties &&
                         <Fragment>
                             <span className="caption text-uppercase font-heavy">Duties:</span>
@@ -30,4 +32,4 @@ const EducationItem = props => {
     );
 };
 
-export default EducationItem;
+export default ExperienceItem;
