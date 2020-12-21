@@ -2,7 +2,7 @@
   "name": "portfolio-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://umbreonight.github.io/portfolio-app/",
+  "homepage": "https://umbreonight.github.io/",
   "dependencies": {
     "@loadable/component": "^5.13.2",
     "@react-hook/window-scroll": "^1.3.0",
